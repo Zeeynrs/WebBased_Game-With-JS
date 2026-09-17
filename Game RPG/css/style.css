@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #06070a;
+    background-image: 
+        radial-gradient(circle at 50% 30%, rgba(30, 41, 67, 0.5) 0%, rgba(6, 7, 10, 0.95) 80%),
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 32px 32px, 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    user-select: none;
+    overflow: hidden;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.canvas-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 
+        0 0 0 3px #2d3748,
+        0 0 35px rgba(241, 196, 15, 0.2),
+        0 20px 40px rgba(0, 0, 0, 0.85);
+}
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+    background-color: #0b0e14;
+    cursor: pointer;
+}
+
+.controls-hint {
+    margin-top: 14px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(18, 22, 33, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    font-size: 13px;
+    color: #a0aec0;
+}
+
+.controls-hint kbd {
+    background: #2d3748;
+    color: #f7fafc;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    box-shadow: 0 2px 0 #1a202c;
+    border: 1px solid #4a5568;
+}
+
+.key-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
